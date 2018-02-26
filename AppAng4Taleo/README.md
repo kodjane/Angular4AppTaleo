@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ##Running
 
-Enable internet connection to load some images
+Make sure you have internet connection for loading some images
 
 ## Code scaffolding
 
