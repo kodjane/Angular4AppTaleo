@@ -1,0 +1,45 @@
+<p>
+
+</p>
+<form id="formNewPost" name="formNewPost" #postData="ngForm" (ngSubmit)="updatePost(postData.value)">
+
+  <p>
+
+  </p>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>
+          Post
+          <span contenteditable="false" [textContent] = "postObj.id" (input)="postObj.id = $event.target.textContent">
+          </span>
+        </h2>
+      </div>
+      <div class="card-body">
+        <h5>Title:
+          <span class="card-title" contenteditable="false" [textContent] = "postObj.title" (input)="postObj.id = $event.target.textContent">Card title</span>
+        </h5>
+
+        <span class="card-text" contenteditable="false" [textContent] = "postObj.body" (input)="postObj.id = $event.target.textContent">Card body</span>
+        <p></p>
+        <div>
+
+         <!-- <label>Title: <input type="text" name="title" ngModel [(ngModel)] = "postObj.title" ></label>
+          <label>Body: <input type="text" name="body" id="body" ngModel [(ngModel)] = "postObj.body" ></label>
+          <input type="submit" value="Update Post">
+-->
+          <a (click)="deletePost(postObj.id)" class="btn btn-danger">
+            <img src="{{deleteButton}}" width="25">
+            Delete
+          </a>
+          <a href="#" class="btn btn-primary">
+            <img src="{{shareButton}}" width="28">
+            Share
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p></p>
+
+</form>
