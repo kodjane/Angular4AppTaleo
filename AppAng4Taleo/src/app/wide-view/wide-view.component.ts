@@ -2,7 +2,7 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ApiTaleoService} from '../../services/api-TaleoService';
 import {ActivatedRoute, Router} from '@angular/router';
 import 'rxjs/add/operator/toPromise';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {toPromise} from 'rxjs/operator/toPromise';
 
 @Component({
@@ -17,6 +17,7 @@ export class WideViewComponent implements OnInit {
   deleteButton: string = "http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/black-inlay-crystal-clear-bubble-icons-business/077427-black-inlay-crystal-clear-bubble-icon-business-trashcan3.png";
   shareButton: string = "https://cdn.onlinewebfonts.com/svg/img_360768.png";
   private headers = new Headers({'Content-Type': 'application/json'});
+  //Headers({'Content-Type': 'application/json'})
 
   constructor(private http: HttpClient,
               private api_taleoService: ApiTaleoService,
